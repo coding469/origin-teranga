@@ -1,109 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { images } from "@/lib/images";
-
-type Tile = {
-  num: string;
-  title: string;
-  desc: string;
-  cta: string;
-  href: string;
-  image: string;
-  alt: string;
-  span: string;
-  aspect: string;
-};
-
-const TILES: Tile[] = [
-  {
-    num: "01",
-    title: "Voyage privé",
-    desc: "Simulez et réservez votre séjour sur mesure entre Dakar et ses alentours.",
-    cta: "Découvrir",
-    href: "#reserver",
-    image: images.activites.voyage,
-    alt: "Pirogue colorée sur une plage sénégalaise",
-    span: "lg:col-span-3",
-    aspect: "aspect-[6/5]",
-  },
-  {
-    num: "02",
-    title: "The Party",
-    desc: "Les soirées officielles du festival — réservation en ligne, places limitées.",
-    cta: "Réserver",
-    href: "#reserver",
-    image: images.activites.party,
-    alt: "Foule en liesse lors d'un concert de nuit",
-    span: "lg:col-span-3",
-    aspect: "aspect-[6/5]",
-  },
-  {
-    num: "03",
-    title: "Village Origin Teranga",
-    desc: "Une expérience intergénérationnelle, de 7 à 77 ans.",
-    cta: "Visiter",
-    href: "#reserver",
-    image: images.activites.village,
-    alt: "Grande place animée par une foule nombreuse",
-    span: "lg:col-span-2",
-    aspect: "aspect-[1/1.05]",
-  },
-  {
-    num: "04",
-    title: "Excursion",
-    desc: "Sorties guidées à la découverte du territoire sénégalais.",
-    cta: "Explorer",
-    href: "#reserver",
-    image: images.activites.excursion,
-    alt: "Monument de la Renaissance africaine à Dakar au coucher du soleil",
-    span: "lg:col-span-2",
-    aspect: "aspect-[1/1.05]",
-  },
-  {
-    num: "05",
-    title: "Battle Afro",
-    desc: "La grande compétition de danse du festival.",
-    cta: "Participer",
-    href: "#battle",
-    image: images.activites.battleAfro,
-    alt: "Cercle de danseurs en pleine performance",
-    span: "lg:col-span-2",
-    aspect: "aspect-[1/1.05]",
-  },
-  {
-    num: "06",
-    title: "Masterclass",
-    desc: "Ateliers animés par des expertes et experts de la culture africaine.",
-    cta: "S'inscrire",
-    href: "#reserver",
-    image: images.activites.masterclass,
-    alt: "Artisan au travail lors d'un atelier créatif",
-    span: "lg:col-span-2",
-    aspect: "aspect-[6/5]",
-  },
-  {
-    num: "07",
-    title: "Marketplace",
-    desc: "Artisanat, mode et saveurs portés par des créateurs africains.",
-    cta: "Explorer",
-    href: "#reserver",
-    image: images.activites.marketplace,
-    alt: "Textiles et vêtements colorés exposés sur un marché",
-    span: "lg:col-span-2",
-    aspect: "aspect-[6/5]",
-  },
-  {
-    num: "08",
-    title: "Environnement & ODD",
-    desc: "Un engagement concret pour un festival durable et responsable.",
-    cta: "En savoir plus",
-    href: "#reserver",
-    image: images.activites.environnement,
-    alt: "Acacia isolé dans la savane africaine",
-    span: "lg:col-span-2",
-    aspect: "aspect-[6/5]",
-  },
-];
+import { ACTIVITES } from "@/lib/activites";
 
 export default function Activites() {
   return (
@@ -121,17 +18,17 @@ export default function Activites() {
           </h2>
         </div>
         <p className="max-w-[360px] text-[15px] leading-relaxed text-ink/62">
-          Des expériences pensées pour toutes les générations — du voyage
+          Des expériences pensées pour toutes les générations, du voyage
           privé à la marketplace, chaque activité raconte une part de la
           culture.
         </p>
       </div>
 
       <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-6">
-        {TILES.map((tile) => (
+        {ACTIVITES.map((tile) => (
           <Link
-            key={tile.num}
-            href={tile.href}
+            key={tile.slug}
+            href={`/activites/${tile.slug}`}
             className={`group relative isolate overflow-hidden rounded-[18px] ${tile.span} ${tile.aspect}`}
           >
             <div className="absolute inset-0 transition-transform duration-1000 ease-out group-hover:scale-[1.07]">
@@ -153,7 +50,7 @@ export default function Activites() {
                   {tile.title}
                 </h3>
                 <p className="mb-3.5 max-w-[360px] text-[13px] text-ink/62 sm:text-sm">
-                  {tile.desc}
+                  {tile.shortDesc}
                 </p>
                 <span className="inline-block text-[12.5px] font-bold transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                   {tile.cta} →

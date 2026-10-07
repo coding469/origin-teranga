@@ -1,12 +1,6 @@
 import Image from "next/image";
 import { images } from "@/lib/images";
 
-const STATS = [
-  { value: "5 000+", label: "participants attendus" },
-  { value: "7", label: "univers explorés" },
-  { value: "2", label: "villes, une racine" },
-];
-
 export default function Manifesto() {
   return (
     <section
@@ -23,7 +17,7 @@ export default function Manifesto() {
             culture ressemble à un arbre sans racines. »
           </p>
           <span className="mt-6 block text-[13.5px] uppercase tracking-[0.08em] text-dark-ink/64">
-            — Marcus Garvey
+            Marcus Garvey
           </span>
         </div>
 
@@ -42,20 +36,8 @@ export default function Manifesto() {
             Origin Teranga est né entre Paris et Dakar, pensé par des
             Sénégalais autour du bien-être, de la culture, de l&apos;expérience
             et de la communauté. Un festival pour se reconnecter à ses
-            racines — et construire, ensemble, ce qui vient après.
+            racines, et construire, ensemble, ce qui vient après.
           </p>
-          <div className="flex flex-wrap gap-8 border-t border-dark-ink/14 pt-2">
-            {STATS.map((stat) => (
-              <div key={stat.label}>
-                <div className="font-display text-[34px] font-semibold">
-                  {stat.value}
-                </div>
-                <div className="mt-1 text-[12.5px] text-dark-ink/64">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

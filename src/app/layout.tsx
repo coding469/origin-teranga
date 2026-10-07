@@ -16,9 +16,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Origin Teranga — Festival culturel africain",
+  title: "Origin Teranga | Festival culturel africain",
   description:
-    "Origin Teranga est un festival culturel africain qui rassemble les générations, les talents et les histoires — entre Dakar et Paris.",
+    "Origin Teranga est un festival culturel africain qui rassemble les générations, les talents et les histoires, entre Dakar et Paris.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

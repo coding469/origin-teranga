@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/35 to-bg/25" />
         <div className="absolute inset-0 bg-gradient-to-b from-bg/50 via-transparent to-transparent" />
         <span className="absolute right-5 bottom-5 hidden text-[11px] uppercase tracking-[0.18em] text-ink/34 sm:block">
-          Dakar — Paris · 2026
+          Dakar · Paris · 2026
         </span>
       </div>
 
@@ -36,7 +36,7 @@ export default function Hero() {
         </h1>
         <p className="animate-rise mt-7 max-w-[560px] text-lg leading-relaxed text-ink/62">
           Un festival culturel africain qui rassemble les générations, les
-          talents et les histoires — entre Dakar et Paris.
+          talents et les histoires, entre Dakar et Paris.
         </p>
         <div className="animate-rise mt-9 flex flex-wrap gap-4">
           <a

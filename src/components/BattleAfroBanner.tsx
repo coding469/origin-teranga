@@ -28,7 +28,7 @@ export default function BattleAfroBanner() {
           AFRO
         </h2>
         <p className="mb-9 font-display text-[clamp(18px,2.4vw,30px)] italic text-sand-soft">
-          +5 000 personnes attendues
+          La grande compétition de danse du festival
         </p>
         <a
           href="#reserver"

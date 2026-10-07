@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
           <p className="mb-5 text-sm leading-relaxed text-ink/62">
             Un festival culturel africain qui rassemble les générations, les
-            talents et les histoires — entre Dakar et Paris.
+            talents et les histoires, entre Dakar et Paris.
           </p>
           <div className="flex gap-2.5">
             <a

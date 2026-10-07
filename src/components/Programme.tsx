@@ -41,7 +41,7 @@ const ROWS = [
   {
     num: "04",
     title: "Battle Afro",
-    desc: "La grande compétition de danse du festival — plus de 5 000 personnes attendues.",
+    desc: "La grande compétition de danse du festival.",
     tag: "Danse",
     day: "Jour 3",
     cta: "Participer",

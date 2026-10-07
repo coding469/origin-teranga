@@ -18,7 +18,7 @@ const STEPS = [
   },
   {
     title: "Culture",
-    desc: "Musique, danse, gastronomie, savoirs — le cœur du festival.",
+    desc: "Musique, danse, gastronomie, savoirs : le cœur du festival.",
     dot: "bg-clay-soft",
     image: images.histoire.culture,
     alt: "Djembé traditionnel africain",
@@ -55,7 +55,7 @@ export default function Histoire() {
         <p className="mt-4 text-base leading-relaxed text-ink/62">
           Origin Teranga est né d&apos;une conviction simple : pour avancer, il
           faut d&apos;abord savoir d&apos;où l&apos;on vient. Entre deux villes, un même
-          fil se tisse — celui de la culture, transmise et réinventée.
+          fil se tisse, celui de la culture, transmise et réinventée.
         </p>
       </div>
 
