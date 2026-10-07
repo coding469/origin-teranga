@@ -31,7 +31,7 @@ export default function Manifesto() {
           />
         </div>
 
-        <div className="flex min-w-[280px] flex-1 basis-[360px] flex-col gap-6">
+        <div className="flex min-w-[280px] flex-1 basis-[360px] flex-col justify-center gap-6 self-stretch">
           <p className="text-[17px] leading-[1.75] text-dark-ink/64">
             Origin Teranga est né entre Paris et Dakar, pensé par des
             Sénégalais autour du bien-être, de la culture, de l&apos;expérience
