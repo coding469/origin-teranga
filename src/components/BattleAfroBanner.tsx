@@ -31,7 +31,7 @@ export default function BattleAfroBanner() {
           La grande compétition de danse du festival
         </p>
         <a
-          href="#reserver"
+          href="/reserver"
           className="inline-flex h-[58px] items-center rounded-full bg-clay px-9 text-[15px] font-bold text-ink transition-all duration-300 hover:bg-clay-soft hover:-translate-y-0.5"
         >
           Participer / Réserver

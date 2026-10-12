@@ -9,7 +9,7 @@ const ROWS = [
     tag: "Ouverture",
     day: "Jour 1",
     cta: "Réserver",
-    href: "#reserver",
+    href: "/reserver",
     variant: "line" as const,
     image: images.programme.bienvenue,
     alt: "Foule souriante levant les mains en signe de bienvenue",
@@ -21,7 +21,7 @@ const ROWS = [
     tag: "Musique",
     day: "Jour 2",
     cta: "Réserver",
-    href: "#reserver",
+    href: "/reserver",
     variant: "line" as const,
     image: images.programme.concert,
     alt: "Foule face à une scène de concert illuminée",
@@ -33,7 +33,7 @@ const ROWS = [
     tag: "Gastronomie",
     day: "Jour 2",
     cta: "Réserver",
-    href: "#reserver",
+    href: "/reserver",
     variant: "line" as const,
     image: images.programme.culinaire,
     alt: "Plat de riz et viande servi traditionnellement",
@@ -57,7 +57,7 @@ const ROWS = [
     tag: "Clôture",
     day: "Jour 3",
     cta: "Réserver",
-    href: "#reserver",
+    href: "/reserver",
     variant: "line" as const,
     image: images.programme.nuitVoix,
     alt: "Microphone vintage sur scène",
@@ -80,7 +80,7 @@ export default function Programme() {
           </h2>
         </div>
         <a
-          href="#reserver"
+          href="/reserver"
           className="hidden h-[52px] items-center gap-2.5 rounded-full border border-ink/40 px-7 text-sm font-bold text-ink transition-all duration-300 hover:border-ink hover:bg-ink/6 lg:inline-flex"
         >
           Réserver ma place

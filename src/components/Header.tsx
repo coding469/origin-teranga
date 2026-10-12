@@ -57,7 +57,7 @@ export default function Header() {
 
         <div className="hidden lg:block">
           <a
-            href="#reserver"
+            href="/reserver"
             className="inline-flex h-[52px] items-center gap-2.5 rounded-full bg-clay px-7 text-sm font-bold text-ink transition-all duration-300 hover:bg-clay-soft hover:-translate-y-0.5"
           >
             Réserver
@@ -105,7 +105,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#reserver"
+            href="/reserver"
             onClick={() => setOpen(false)}
             className="mt-5 inline-flex h-[52px] items-center justify-center gap-2.5 rounded-full bg-clay px-7 text-sm font-bold text-ink"
           >
