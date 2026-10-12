@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
+import EventBar from "@/components/EventBar";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -24,7 +25,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${fraunces.variable} ${manrope.variable}`}>
-      <body className="bg-bg text-ink font-sans antialiased">{children}</body>
+      <body className="bg-bg text-ink font-sans antialiased">
+        <EventBar />
+        {children}
+      </body>
     </html>
   );
 }

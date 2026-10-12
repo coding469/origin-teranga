@@ -19,13 +19,13 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/35 to-bg/25" />
         <div className="absolute inset-0 bg-gradient-to-b from-bg/50 via-transparent to-transparent" />
         <span className="absolute right-5 bottom-5 hidden text-[11px] uppercase tracking-[0.18em] text-ink/34 sm:block">
-          Dakar · Paris · 2026
+          Dakar · ESCOA · 2026
         </span>
       </div>
 
       <div className="relative z-10 max-w-[980px] animate-fade-in">
         <div className="animate-rise mb-5 text-[12.5px] font-bold uppercase tracking-[0.22em] text-clay-soft">
-          Origin Teranga · Festival culturel africain
+          Origin Teranga Expérience 2026
         </div>
         <h1 className="animate-rise font-display font-medium text-ink text-[clamp(40px,10vw,112px)] leading-[0.98] tracking-tight">
           Nos origines.
@@ -35,21 +35,20 @@ export default function Hero() {
           <em className="italic text-clay-soft">Notre avenir.</em>
         </h1>
         <p className="animate-rise mt-7 max-w-[560px] text-lg leading-relaxed text-ink/62">
-          Un festival culturel africain qui rassemble les générations, les
-          talents et les histoires, entre Dakar et Paris.
+          Origin Teranga Expérience — Du 4 au 8 novembre 2026, ESCOA Dakar.
         </p>
         <div className="animate-rise mt-9 flex flex-wrap gap-4">
           <a
-            href="#activites"
+            href="/reserver"
             className="inline-flex h-[52px] items-center gap-2.5 rounded-full bg-clay px-7 text-sm font-bold text-ink transition-all duration-300 hover:bg-clay-soft hover:-translate-y-0.5"
           >
-            Découvrir le festival
+            S&apos;inscrire
           </a>
           <a
             href="#programme"
             className="inline-flex h-[52px] items-center gap-2.5 rounded-full border border-ink/40 px-7 text-sm font-bold text-ink transition-all duration-300 hover:border-ink hover:bg-ink/6"
           >
-            Voir le programme
+            Découvrir le programme
           </a>
         </div>
       </div>

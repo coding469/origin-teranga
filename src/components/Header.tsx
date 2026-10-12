@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { href: "#manifesto", label: "Festival" },
-  { href: "#histoire", label: "Concept" },
-  { href: "#programme", label: "Programme" },
-  { href: "#activites", label: "Activités" },
-  { href: "#partenaires", label: "Partenaires" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#ecosysteme", label: "Festival" },
+  { href: "/#ecosysteme", label: "Expériences" },
+  { href: "/#ecosysteme", label: "Passeport" },
+  { href: "/#ecosysteme", label: "Oteranga" },
+  { href: "/#ecosysteme", label: "Communauté" },
+  { href: "/#ecosysteme", label: "Impact" },
+  { href: "/#histoire", label: "À propos" },
 ];
 
 export default function Header() {
@@ -32,7 +33,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 backdrop-blur-md transition-colors duration-[400ms] border-b ${
+      className={`sticky top-10 z-50 backdrop-blur-md transition-colors duration-[400ms] border-b ${
         scrolled
           ? "bg-bg/92 border-ink/14"
           : "bg-bg/42 border-ink/8"
@@ -60,7 +61,7 @@ export default function Header() {
             href="/reserver"
             className="inline-flex h-[52px] items-center gap-2.5 rounded-full bg-clay px-7 text-sm font-bold text-ink transition-all duration-300 hover:bg-clay-soft hover:-translate-y-0.5"
           >
-            Réserver
+            S&apos;inscrire
           </a>
         </div>
 
@@ -109,7 +110,7 @@ export default function Header() {
             onClick={() => setOpen(false)}
             className="mt-5 inline-flex h-[52px] items-center justify-center gap-2.5 rounded-full bg-clay px-7 text-sm font-bold text-ink"
           >
-            Réserver
+            S&apos;inscrire
           </a>
         </nav>
       </div>
