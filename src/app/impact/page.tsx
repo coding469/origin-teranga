@@ -1,0 +1,27 @@
+import type { Metadata } from "next";
+import PillarPage from "@/components/PillarPage";
+import { images } from "@/lib/images";
+
+export const metadata: Metadata = {
+  title: "Impact | Origin Teranga",
+  description:
+    "L'Afrique se construit : l'ambition sociale et économique d'Origin Teranga, au service de l'entrepreneuriat et de l'éducation.",
+};
+
+export default function ImpactPage() {
+  return (
+    <PillarPage
+      pillar="impact"
+      title="Impact"
+      signature="L'Afrique se construit."
+      vision="L'ambition sociale et économique d'Origin Teranga, au service de l'entrepreneuriat et de l'éducation."
+      image={images.univers.entrepreneuriat}
+      imageAlt="Groupe d'entrepreneurs africains en réunion"
+      objectifs={[
+        "Soutenir l'entrepreneuriat et les projets à impact",
+        "Accompagner l'éducation et la transmission des savoirs",
+        "Construire des partenariats durables pour l'avenir du continent",
+      ]}
+    />
+  );
+}

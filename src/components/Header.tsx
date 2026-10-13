@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { href: "/#ecosysteme", label: "Festival" },
-  { href: "/#ecosysteme", label: "Expériences" },
-  { href: "/#ecosysteme", label: "Passeport" },
-  { href: "/#ecosysteme", label: "Oteranga" },
-  { href: "/#ecosysteme", label: "Communauté" },
-  { href: "/#ecosysteme", label: "Impact" },
+  { href: "/festival", label: "Festival" },
+  { href: "/experiences", label: "Expériences" },
+  { href: "/passeport", label: "Passeport" },
+  { href: "/oteranga", label: "Oteranga" },
+  { href: "/communaute", label: "Communauté" },
+  { href: "/impact", label: "Impact" },
   { href: "/#histoire", label: "À propos" },
 ];
 

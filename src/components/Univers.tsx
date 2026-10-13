@@ -1,10 +1,10 @@
 const PILLARS = [
-  { name: "Festival", signature: "L'Afrique se célèbre." },
-  { name: "Expériences", signature: "L'Afrique se vit." },
-  { name: "Passeport", signature: "L'Afrique se découvre." },
-  { name: "Oteranga", signature: "L'Afrique se crée." },
-  { name: "Communauté", signature: "L'Afrique se rassemble." },
-  { name: "Impact", signature: "L'Afrique se construit." },
+  { name: "Festival", href: "/festival", signature: "L'Afrique se célèbre." },
+  { name: "Expériences", href: "/experiences", signature: "L'Afrique se vit." },
+  { name: "Passeport", href: "/passeport", signature: "L'Afrique se découvre." },
+  { name: "Oteranga", href: "/oteranga", signature: "L'Afrique se crée." },
+  { name: "Communauté", href: "/communaute", signature: "L'Afrique se rassemble." },
+  { name: "Impact", href: "/impact", signature: "L'Afrique se construit." },
 ];
 
 export default function Univers() {
@@ -30,15 +30,16 @@ export default function Univers() {
 
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
         {PILLARS.map((pillar) => (
-          <div
+          <a
             key={pillar.name}
-            className="rounded-2xl border border-dark-ink/12 bg-sand-soft px-6 py-8"
+            href={pillar.href}
+            className="group rounded-2xl border border-dark-ink/12 bg-sand-soft px-6 py-8 transition-colors duration-300 hover:border-clay"
           >
             <h3 className="font-display text-xl">{pillar.name}</h3>
             <p className="mt-2 text-[15px] italic text-dark-ink/64">
               {pillar.signature}
             </p>
-          </div>
+          </a>
         ))}
       </div>
     </section>
