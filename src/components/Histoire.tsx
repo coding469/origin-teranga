@@ -3,18 +3,18 @@ import { images } from "@/lib/images";
 
 const STEPS = [
   {
-    title: "Paris",
-    desc: "Là où le projet prend forme, porté par une diaspora engagée.",
-    dot: "bg-clay",
-    image: images.histoire.paris,
-    alt: "Tour Eiffel vue d'une rue parisienne",
-  },
-  {
     title: "Dakar",
     desc: "Le terrain, la source, l'endroit où tout se vit pleinement.",
-    dot: "bg-gold",
+    dot: "bg-clay",
     image: images.histoire.dakar,
     alt: "Monument de la Renaissance africaine à Dakar",
+  },
+  {
+    title: "Diaspora",
+    desc: "Une communauté connectée, en Afrique et partout dans le monde.",
+    dot: "bg-gold",
+    image: images.univers.emergence,
+    alt: "Panel de discussion réunissant la diaspora africaine",
   },
   {
     title: "Culture",
@@ -50,12 +50,12 @@ export default function Histoire() {
           Notre histoire
         </span>
         <h2 className="mt-3.5 font-display text-[clamp(30px,4vw,56px)] font-medium">
-          De Paris à Dakar, une même racine
+          Ancrés à Dakar, ouverts sur le monde
         </h2>
         <p className="mt-4 text-base leading-relaxed text-ink/62">
           Origin Teranga est né d&apos;une conviction simple : pour avancer, il
-          faut d&apos;abord savoir d&apos;où l&apos;on vient. Entre deux villes, un même
-          fil se tisse, celui de la culture, transmise et réinventée.
+          faut d&apos;abord savoir d&apos;où l&apos;on vient. De Dakar à ses diasporas, un
+          même fil se tisse, celui de la culture, transmise et réinventée.
         </p>
       </div>
 

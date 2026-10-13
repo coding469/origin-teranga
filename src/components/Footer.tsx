@@ -47,8 +47,9 @@ export default function Footer() {
             Origin&nbsp;Teranga
           </div>
           <p className="mb-5 text-sm leading-relaxed text-ink/62">
-            Un festival culturel africain qui rassemble les générations, les
-            talents et les histoires, entre Dakar et Paris.
+            Un écosystème culturel, communautaire et économique qui célèbre
+            les cultures africaines, connecte les talents et contribue à
+            construire l&apos;avenir du continent.
           </p>
           <div className="flex gap-2.5">
             <a
@@ -114,14 +115,7 @@ export default function Footer() {
             Contact
           </div>
           <div className="flex flex-col gap-2.5 text-sm leading-relaxed text-ink/62">
-            <span>
-              92 Avenue des Champs-Élysées
-              <br />
-              75008 Paris, France
-            </span>
-            <a className="underline-link" href="tel:+33623474197">
-              +33 6 23 47 41 97
-            </a>
+            <span>Dakar, Sénégal</span>
             <a className="underline-link" href="mailto:contact@originteranga.com">
               contact@originteranga.com
             </a>

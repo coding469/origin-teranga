@@ -48,7 +48,7 @@ export default function Header() {
           Origin&nbsp;Teranga
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden xl:flex items-center gap-6">
           {NAV_LINKS.map((link) => (
             <a key={link.href} href={link.href} className="nav-link text-sm font-semibold text-ink/62 hover:text-ink">
               {link.label}
@@ -56,7 +56,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <a
             href="/reserver"
             className="inline-flex h-[52px] items-center gap-2.5 rounded-full bg-clay px-7 text-sm font-bold text-ink transition-all duration-300 hover:bg-clay-soft hover:-translate-y-0.5"
@@ -69,7 +69,7 @@ export default function Header() {
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden relative h-10 w-10 flex items-center justify-center text-ink"
+          className="xl:hidden relative h-10 w-10 flex items-center justify-center text-ink"
         >
           <span
             className={`absolute block h-[1.5px] w-6 bg-current transition-transform duration-300 ${
@@ -90,7 +90,7 @@ export default function Header() {
       </div>
 
       <div
-        className={`lg:hidden overflow-hidden transition-[max-height,opacity] duration-[400ms] ease-out bg-bg/97 border-t border-ink/10 ${
+        className={`xl:hidden overflow-hidden transition-[max-height,opacity] duration-[400ms] ease-out bg-bg/97 border-t border-ink/10 ${
           open ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >

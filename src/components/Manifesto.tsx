@@ -33,10 +33,10 @@ export default function Manifesto() {
 
         <div className="flex min-w-[280px] flex-1 basis-[360px] flex-col justify-center gap-6 self-stretch">
           <p className="text-[17px] leading-[1.75] text-dark-ink/64">
-            Origin Teranga est né entre Paris et Dakar, pensé par des
-            Sénégalais autour du bien-être, de la culture, de l&apos;expérience
-            et de la communauté. Un festival pour se reconnecter à ses
-            racines, et construire, ensemble, ce qui vient après.
+            Origin Teranga est né à Dakar, porté par une volonté de
+            reconnecter l&apos;Afrique à ses racines et à ses diasporas. Un
+            écosystème pour célébrer, transmettre et construire, ensemble, ce
+            qui vient après.
           </p>
         </div>
       </div>
