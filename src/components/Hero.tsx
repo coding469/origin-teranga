@@ -7,7 +7,7 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-[92vh] flex-col justify-end overflow-hidden px-5 pb-20 sm:px-8 lg:px-[72px] lg:pb-[88px]"
     >
-      <div className="grain absolute inset-0">
+      <div className="absolute inset-0">
         <Image
           src={images.hero}
           alt="Foule célébrant lors d'un festival culturel africain"

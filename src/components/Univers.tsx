@@ -1,10 +1,49 @@
+import Image from "next/image";
+import { images } from "@/lib/images";
+
 const PILLARS = [
-  { name: "Festival", href: "/festival", signature: "L'Afrique se célèbre." },
-  { name: "Expériences", href: "/experiences", signature: "L'Afrique se vit." },
-  { name: "Passeport", href: "/passeport", signature: "L'Afrique se découvre." },
-  { name: "Oteranga", href: "/oteranga", signature: "L'Afrique se crée." },
-  { name: "Communauté", href: "/communaute", signature: "L'Afrique se rassemble." },
-  { name: "Impact", href: "/impact", signature: "L'Afrique se construit." },
+  {
+    name: "Festival",
+    href: "/festival",
+    signature: "L'Afrique se célèbre.",
+    image: images.activites.party,
+    accent: "clay" as const,
+  },
+  {
+    name: "Expériences",
+    href: "/experiences",
+    signature: "L'Afrique se vit.",
+    image: images.univers.sport,
+    accent: "gold" as const,
+  },
+  {
+    name: "Passeport",
+    href: "/passeport",
+    signature: "L'Afrique se découvre.",
+    image: images.activites.voyage,
+    accent: "clay" as const,
+  },
+  {
+    name: "Oteranga",
+    href: "/oteranga",
+    signature: "L'Afrique se crée.",
+    image: images.activites.marketplace,
+    accent: "gold" as const,
+  },
+  {
+    name: "Communauté",
+    href: "/communaute",
+    signature: "L'Afrique se rassemble.",
+    image: images.histoire.transmission,
+    accent: "clay" as const,
+  },
+  {
+    name: "Impact",
+    href: "/impact",
+    signature: "L'Afrique se construit.",
+    image: images.univers.entrepreneuriat,
+    accent: "gold" as const,
+  },
 ];
 
 export default function Univers() {
@@ -33,12 +72,29 @@ export default function Univers() {
           <a
             key={pillar.name}
             href={pillar.href}
-            className="group rounded-2xl border border-dark-ink/12 bg-sand-soft px-6 py-8 transition-colors duration-300 hover:border-clay"
+            className="group overflow-hidden rounded-2xl border border-dark-ink/12 bg-sand-soft transition-colors duration-300 hover:border-clay"
           >
-            <h3 className="font-display text-xl">{pillar.name}</h3>
-            <p className="mt-2 text-[15px] italic text-dark-ink/64">
-              {pillar.signature}
-            </p>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src={pillar.image}
+                alt={pillar.signature}
+                fill
+                sizes="(min-width: 1024px) 33vw, 50vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.07]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-ink/55 via-transparent to-transparent" />
+              <span
+                className={`absolute left-4 top-4 h-2.5 w-2.5 rounded-full ${
+                  pillar.accent === "gold" ? "bg-gold" : "bg-clay-soft"
+                }`}
+              />
+            </div>
+            <div className="px-6 py-6">
+              <h3 className="font-display text-xl">{pillar.name}</h3>
+              <p className="mt-2 text-[15px] italic text-dark-ink/64">
+                {pillar.signature}
+              </p>
+            </div>
           </a>
         ))}
       </div>

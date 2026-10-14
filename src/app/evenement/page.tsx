@@ -114,7 +114,7 @@ export default function ExperiencePage() {
           {RDV.map((rdv) => (
             <div
               key={rdv.id}
-              className="rounded-2xl border border-ink/14 px-6 py-7"
+              className="flex flex-col rounded-2xl border border-ink/14 px-6 py-7"
             >
               <span className="text-[12.5px] font-bold uppercase tracking-[0.18em] text-ink/34">
                 {rdv.time}
@@ -125,35 +125,17 @@ export default function ExperiencePage() {
               <p className="mt-2 text-[14px] leading-relaxed text-ink/62">
                 {rdv.desc}
               </p>
-              <a
-                href={`#${rdv.id}`}
-                className="mt-4 inline-flex text-[13px] font-bold text-clay-soft underline-link"
-              >
-                Découvrir →
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-16 flex flex-col gap-12">
-          {RDV.map((rdv) => (
-            <div key={rdv.id} id={rdv.id} className="scroll-mt-24">
-              <span className="text-[12.5px] font-bold uppercase tracking-[0.18em] text-ink/34">
-                {rdv.time}
-              </span>
-              <h3 className="mt-2 font-display text-2xl font-medium">
-                {rdv.title}
-              </h3>
-              <p className="mt-2 max-w-[640px] text-[15px] leading-relaxed text-ink/62">
-                {rdv.desc}
-              </p>
-              {rdv.bookable && (
+              {rdv.bookable ? (
                 <a
                   href="/reserver"
-                  className="mt-5 inline-flex h-[48px] items-center gap-2.5 rounded-full bg-clay px-6 text-sm font-bold text-ink transition-all duration-300 hover:bg-clay-soft hover:-translate-y-0.5"
+                  className="mt-5 inline-flex h-[44px] items-center gap-2.5 self-start rounded-full bg-clay px-6 text-[13px] font-bold text-ink transition-all duration-300 hover:bg-clay-soft hover:-translate-y-0.5"
                 >
                   Réserver
                 </a>
+              ) : (
+                <span className="mt-5 inline-flex h-[44px] items-center self-start text-[13px] font-bold text-ink/34">
+                  Accès libre
+                </span>
               )}
             </div>
           ))}

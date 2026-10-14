@@ -17,6 +17,8 @@ export default function PasseportPage() {
       vision="Découvrir l'Afrique autrement, à travers des voyages et des destinations qui racontent une autre histoire du continent."
       image={images.activites.voyage}
       imageAlt="Pirogue colorée sur une plage sénégalaise"
+      accentImage={images.activites.excursion}
+      accentImageAlt="Monument de la Renaissance africaine à Dakar au coucher du soleil"
       objectifs={[
         "Faire découvrir des destinations africaines authentiques",
         "Proposer des voyages solidaires et responsables",

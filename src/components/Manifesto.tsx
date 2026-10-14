@@ -21,13 +21,13 @@ export default function Manifesto() {
           </span>
         </div>
 
-        <div className="relative mt-7 aspect-[4/5] min-h-[300px] w-full min-w-[220px] flex-1 basis-[300px] overflow-hidden rounded-[22px] self-stretch grain sm:aspect-auto">
+        <div className="relative mt-7 aspect-[4/5] min-h-[300px] w-full min-w-[220px] flex-1 basis-[300px] overflow-hidden rounded-[22px] self-stretch sm:aspect-auto">
           <Image
             src={images.manifesto}
             alt="Portrait d'une femme sénégalaise en tenue traditionnelle colorée"
             fill
             sizes="(min-width: 1024px) 300px, 100vw"
-            className="object-cover"
+            className="object-cover object-[50%_20%]"
           />
         </div>
 

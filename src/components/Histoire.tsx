@@ -62,20 +62,21 @@ export default function Histoire() {
       <div className="relative grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-0">
         <div className="pointer-events-none absolute top-[30px] left-0 right-0 hidden h-px bg-ink/14 lg:block" />
         {STEPS.map((step) => (
-          <div key={step.title} className="px-0 lg:px-[18px] lg:first:pl-0 lg:last:pr-0">
-            <div className="relative mb-[18px] aspect-[4/3] overflow-hidden rounded-[14px]">
+          <div key={step.title} className="group px-0 lg:px-[18px] lg:first:pl-0 lg:last:pr-0">
+            <div className="relative mb-[18px] aspect-[3/4] overflow-hidden rounded-[14px]">
               <Image
                 src={step.image}
                 alt={step.alt}
                 fill
                 sizes="(min-width: 1024px) 20vw, (min-width: 640px) 33vw, 50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg/55 via-transparent to-transparent" />
             </div>
             <div
               className={`relative z-10 mb-5 h-2.5 w-2.5 rounded-full ${step.dot}`}
             />
-            <div className="mb-1.5 font-display text-xl">{step.title}</div>
+            <div className="mb-1.5 font-display text-2xl">{step.title}</div>
             <p className="text-[13.5px] leading-relaxed text-ink/62">
               {step.desc}
             </p>

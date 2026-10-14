@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
@@ -40,12 +41,16 @@ export default function Header() {
       }`}
     >
       <div className="flex items-center justify-between px-5 py-5 sm:px-8 lg:px-[72px]">
-        <Link
-          href="#top"
-          className="font-display font-semibold text-xl tracking-tight text-ink"
-          onClick={() => setOpen(false)}
-        >
-          Origin&nbsp;Teranga
+        <Link href="/#top" onClick={() => setOpen(false)} aria-label="Origin Teranga — accueil">
+          <Image
+            src="/logo/origin-teranga-mark-light.png"
+            alt="Origin Teranga"
+            width={5611}
+            height={4134}
+            priority
+            sizes="120px"
+            className="h-10 w-auto sm:h-12"
+          />
         </Link>
 
         <nav className="hidden xl:flex items-center gap-6">

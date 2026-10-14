@@ -17,6 +17,8 @@ export default function CommunautePage() {
       vision="Rassembler celles et ceux qui portent le projet Origin Teranga, en Afrique et dans la diaspora."
       image={images.histoire.transmission}
       imageAlt="Transmission intergénérationnelle lors d'un moment de partage"
+      accentImage={images.histoire.paris}
+      accentImageAlt="Rue parisienne avec vue sur la tour Eiffel"
       objectifs={[
         "Fédérer une communauté engagée en Afrique et dans la diaspora",
         "Développer un réseau d'ambassadeurs et de bénévoles",

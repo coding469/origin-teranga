@@ -1,6 +1,6 @@
 function unsplash(slug: string, premium = false) {
   const host = premium ? "plus.unsplash.com" : "images.unsplash.com";
-  return `https://${host}/${slug}`;
+  return `https://${host}/${slug}?auto=format&fit=crop&w=2000&q=75`;
 }
 
 export const images = {

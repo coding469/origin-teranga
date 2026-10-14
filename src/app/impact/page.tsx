@@ -15,8 +15,11 @@ export default function ImpactPage() {
       title="Impact"
       signature="L'Afrique se construit."
       vision="L'ambition sociale et économique d'Origin Teranga, au service de l'entrepreneuriat et de l'éducation."
+      accent="gold"
       image={images.univers.entrepreneuriat}
       imageAlt="Groupe d'entrepreneurs africains en réunion"
+      accentImage={images.programme.bienvenue}
+      accentImageAlt="Communauté locale accueillant des visiteurs les bras levés"
       objectifs={[
         "Soutenir l'entrepreneuriat et les projets à impact",
         "Accompagner l'éducation et la transmission des savoirs",
