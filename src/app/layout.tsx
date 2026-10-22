@@ -17,7 +17,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Origin Teranga | Nos origines. Notre culture. Notre avenir.",
+  title: "Origin Teranga | Le sport nous rassemble. La culture nous connecte.",
   description:
     "Origin Teranga est un écosystème culturel, communautaire et économique qui célèbre les cultures africaines, connecte les talents et contribue à construire l'avenir du continent.",
 };

@@ -16,7 +16,6 @@ const ACTIVITY_LABELS: Record<string, string> = {
 };
 
 const EVENT_DATES = [
-  { value: "2026-11-04", label: "4 novembre" },
   { value: "2026-11-05", label: "5 novembre" },
   { value: "2026-11-06", label: "6 novembre" },
   { value: "2026-11-07", label: "7 novembre" },
