@@ -9,7 +9,7 @@ export default function Programme() {
   return (
     <section
       id="programme"
-      className="bg-bg-soft px-5 py-20 sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
+      className="sticky top-0 z-[13] rounded-t-[32px] bg-bg-soft px-5 py-20 shadow-[0_-24px_60px_rgba(0,0,0,0.25)] sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
     >
       <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
         <div>
@@ -32,9 +32,9 @@ export default function Programme() {
         {RDV_TEASER.map((rdv) => (
           <div
             key={rdv.title}
-            className="flex flex-wrap items-center justify-between gap-4 border-t border-ink/14 py-6 first:border-t-0"
+            className="group flex flex-wrap items-center justify-between gap-4 border-t border-ink/14 px-4 py-6 transition-all duration-300 first:border-t-0 hover:bg-ink/5 hover:px-6"
           >
-            <span className="font-display text-xl font-medium sm:text-2xl">
+            <span className="font-display text-xl font-medium transition-transform duration-300 group-hover:translate-x-1 sm:text-2xl">
               {rdv.title}
             </span>
             <span className="text-[13px] text-ink/62">{rdv.time}</span>

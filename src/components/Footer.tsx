@@ -40,7 +40,7 @@ function FacebookIcon() {
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-[#0A0908] px-5 pt-16 pb-9 sm:px-8 lg:px-[72px]">
+    <footer id="contact" className="relative z-[20] bg-[#0A0908] px-5 pt-16 pb-9 sm:px-8 lg:px-[72px]">
       <div className="flex flex-wrap justify-between gap-12 border-b border-ink/14 pb-12">
         <div className="max-w-[340px] flex-1 basis-[280px]">
           <div className="mb-4 font-display text-xl font-semibold">

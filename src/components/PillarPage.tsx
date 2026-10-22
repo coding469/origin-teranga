@@ -55,7 +55,7 @@ export default function PillarPage({
             </StaggerItem>
           </Stagger>
 
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] lg:aspect-[6/7] lg:max-w-none">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] lg:aspect-[6/7] lg:max-w-[440px] lg:max-h-[620px]">
             <ImageReveal
               src={image}
               alt={imageAlt}
