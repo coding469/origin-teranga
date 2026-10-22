@@ -1,5 +1,16 @@
 import Image from "next/image";
 import { images } from "@/lib/images";
+import Reveal from "@/components/motion/Reveal";
+
+const PARAGRAPHS = [
+  "Né à Tivaouane, au Sénégal, et ayant grandi entre la France et Dakar, j'ai construit mon identité entre deux territoires, deux cultures, mais avec une même conviction : le sport et la culture ont le pouvoir de rassembler, de transmettre et de créer des opportunités.",
+  "C'est de cette conviction qu'est né ORIGIN TERANGA : une initiative qui célèbre nos racines, crée des ponts entre l'Afrique et ses diasporas et place la jeunesse au cœur de l'avenir.",
+  "Pour donner vie à cette ambition, Apolhygie, association basée au Sénégal, s'associe à Art'Press Yourself, association française dirigée par Laeticia Ngoto, qui œuvre depuis plus de dix ans à la promotion des cultures africaines à travers l'organisation d'événements artistiques, culturels et sportifs.",
+  "Deux structures, deux territoires, une même volonté : faire du sport et de la culture des moteurs de rencontre, de partage et d'opportunités.",
+  "À travers le sport, la culture et l'entrepreneuriat, notre ambition est simple : rassembler les générations, révéler les talents et construire ensemble de nouvelles perspectives.",
+  "Du 5 au 8 novembre, rejoignez-nous à Dakar pour faire vivre cette vision.",
+  "Parce que l'avenir se construit ensemble.",
+];
 
 export default function Manifesto() {
   return (
@@ -7,38 +18,43 @@ export default function Manifesto() {
       id="manifesto"
       className="bg-sand px-5 py-20 text-dark-ink sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
     >
-      <div className="flex flex-wrap items-start gap-12 lg:gap-16">
-        <div className="min-w-[280px] flex-1 basis-[440px]">
-          <span className="text-[12.5px] font-bold uppercase tracking-[0.22em] text-clay">
-            Manifeste
-          </span>
-          <p className="mt-6 max-w-[620px] font-display text-[clamp(26px,3.4vw,44px)] font-medium italic leading-[1.25]">
-            « Un peuple qui ne connaît pas son passé, ses origines et sa
-            culture ressemble à un arbre sans racines. »
-          </p>
-          <span className="mt-6 block text-[13.5px] uppercase tracking-[0.08em] text-dark-ink/64">
-            Marcus Garvey
-          </span>
-        </div>
-
-        <div className="relative mt-7 aspect-[4/5] min-h-[300px] w-full min-w-[220px] flex-1 basis-[300px] overflow-hidden rounded-[22px] self-stretch sm:aspect-auto">
+      <div className="grid gap-12 lg:grid-cols-[400px_1fr] lg:gap-16">
+        <Reveal className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[22px] lg:mx-0 lg:max-w-none">
           <Image
             src={images.manifesto}
-            alt="Portrait d'une femme sénégalaise en tenue traditionnelle colorée"
+            alt="Portrait de Falilou Thiam, fondateur d'Origin Teranga"
             fill
-            sizes="(min-width: 1024px) 300px, 100vw"
-            className="object-cover object-[50%_20%]"
+            sizes="(min-width: 1024px) 400px, 100vw"
+            className="object-cover object-[50%_85%]"
           />
-        </div>
+        </Reveal>
 
-        <div className="flex min-w-[280px] flex-1 basis-[360px] flex-col justify-center gap-6 self-stretch">
-          <p className="text-[17px] leading-[1.75] text-dark-ink/64">
-            Origin Teranga est né à Dakar, porté par une volonté de
-            reconnecter l&apos;Afrique à ses racines et à ses diasporas. Un
-            écosystème pour célébrer, transmettre et construire, ensemble, ce
-            qui vient après.
-          </p>
-        </div>
+        <Reveal delay={0.15}>
+          <span className="text-[12.5px] font-bold uppercase tracking-[0.22em] text-clay">
+            Le mot du fondateur
+          </span>
+          <h2 className="mt-4 font-display text-[clamp(26px,3vw,38px)] font-medium">
+            Falilou Thiam
+          </h2>
+          <span className="mt-1 block text-[13.5px] uppercase tracking-[0.08em] text-dark-ink/64">
+            Fondateur d&apos;ORIGIN TERANGA
+          </span>
+
+          <div className="mt-7 flex flex-col gap-5">
+            {PARAGRAPHS.map((paragraph, i) => (
+              <p
+                key={i}
+                className={
+                  i === 0
+                    ? "font-display text-[clamp(18px,2vw,22px)] italic leading-[1.45] text-dark-ink"
+                    : "text-[15.5px] leading-[1.75] text-dark-ink/72"
+                }
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

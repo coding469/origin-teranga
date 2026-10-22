@@ -1,6 +1,4 @@
 const RDV_TEASER = [
-  { time: "04 nov", title: "Soirée de bienvenue" },
-  { time: "04–08 nov", title: "Retransmissions sportives" },
   { time: "14h00", title: "Ateliers créatifs" },
   { time: "16h30", title: "Conférences" },
   { time: "17h30", title: "Masterclass" },
@@ -19,7 +17,7 @@ export default function Programme() {
             Au programme
           </span>
           <h2 className="mt-3.5 font-display text-[clamp(30px,4vw,56px)] font-medium">
-            Cinq jours, six rendez-vous
+            Quatre jours, quatre rendez-vous
           </h2>
         </div>
         <a

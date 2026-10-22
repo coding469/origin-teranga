@@ -1,5 +1,7 @@
-import Image from "next/image";
 import { images } from "@/lib/images";
+import { Stagger, StaggerItem } from "@/components/motion/Stagger";
+import TiltCard from "@/components/motion/TiltCard";
+import Counter from "@/components/motion/Counter";
 
 const PILLARS = [
   {
@@ -8,6 +10,7 @@ const PILLARS = [
     signature: "L'Afrique se célèbre.",
     image: images.activites.party,
     accent: "clay" as const,
+    size: "lg" as const,
   },
   {
     name: "Expériences",
@@ -15,6 +18,7 @@ const PILLARS = [
     signature: "L'Afrique se vit.",
     image: images.univers.sport,
     accent: "gold" as const,
+    size: "sm" as const,
   },
   {
     name: "Passeport",
@@ -22,6 +26,7 @@ const PILLARS = [
     signature: "L'Afrique se découvre.",
     image: images.activites.voyage,
     accent: "clay" as const,
+    size: "sm" as const,
   },
   {
     name: "Oteranga",
@@ -29,6 +34,7 @@ const PILLARS = [
     signature: "L'Afrique se crée.",
     image: images.activites.marketplace,
     accent: "gold" as const,
+    size: "sm" as const,
   },
   {
     name: "Communauté",
@@ -36,6 +42,7 @@ const PILLARS = [
     signature: "L'Afrique se rassemble.",
     image: images.histoire.transmission,
     accent: "clay" as const,
+    size: "sm" as const,
   },
   {
     name: "Impact",
@@ -43,6 +50,7 @@ const PILLARS = [
     signature: "L'Afrique se construit.",
     image: images.univers.entrepreneuriat,
     accent: "gold" as const,
+    size: "sm" as const,
   },
 ];
 
@@ -52,7 +60,7 @@ export default function Univers() {
       id="ecosysteme"
       className="bg-sand px-5 py-20 text-dark-ink sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
     >
-      <div className="mb-12 max-w-[680px]">
+      <div className="mb-10 max-w-[680px]">
         <span className="text-[12.5px] font-bold uppercase tracking-[0.22em] text-clay">
           Bien plus qu&apos;un événement
         </span>
@@ -67,37 +75,61 @@ export default function Univers() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
-        {PILLARS.map((pillar) => (
-          <a
-            key={pillar.name}
-            href={pillar.href}
-            className="group overflow-hidden rounded-2xl border border-dark-ink/12 bg-sand-soft transition-colors duration-300 hover:border-clay"
-          >
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src={pillar.image}
-                alt={pillar.signature}
-                fill
-                sizes="(min-width: 1024px) 33vw, 50vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.07]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-ink/55 via-transparent to-transparent" />
-              <span
-                className={`absolute left-4 top-4 h-2.5 w-2.5 rounded-full ${
-                  pillar.accent === "gold" ? "bg-gold" : "bg-clay-soft"
-                }`}
-              />
-            </div>
-            <div className="px-6 py-6">
-              <h3 className="font-display text-xl">{pillar.name}</h3>
-              <p className="mt-2 text-[15px] italic text-dark-ink/64">
-                {pillar.signature}
-              </p>
-            </div>
-          </a>
-        ))}
+      <div className="mb-12 flex flex-wrap gap-10">
+        <div>
+          <div className="font-display text-[clamp(32px,4vw,44px)] italic text-clay">
+            <Counter to={6} />
+          </div>
+          <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-dark-ink/50">
+            Piliers
+          </p>
+        </div>
+        <div>
+          <div className="font-display text-[clamp(32px,4vw,44px)] italic text-clay">
+            <Counter to={5} />
+          </div>
+          <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-dark-ink/50">
+            Jours de festival
+          </p>
+        </div>
+        <div>
+          <div className="font-display text-[clamp(32px,4vw,44px)] italic text-clay">
+            <Counter to={2026} duration={1200} />
+          </div>
+          <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-dark-ink/50">
+            Édition
+          </p>
+        </div>
       </div>
+
+      <Stagger className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:grid-rows-2">
+        {PILLARS.map((pillar) => (
+          <StaggerItem
+            key={pillar.name}
+            className={
+              pillar.size === "lg"
+                ? "col-span-2 row-span-2 aspect-[4/3] lg:aspect-auto"
+                : "col-span-1 aspect-[4/3] lg:aspect-auto"
+            }
+          >
+            <TiltCard
+              href={pillar.href}
+              image={pillar.image}
+              alt={pillar.signature}
+              accentClassName={pillar.accent === "gold" ? "bg-gold" : "bg-clay-soft"}
+              sizes={
+                pillar.size === "lg"
+                  ? "(min-width: 1024px) 50vw, 100vw"
+                  : "(min-width: 1024px) 25vw, 50vw"
+              }
+              className="h-full"
+            >
+              <h3 className="font-display text-xl text-ink">{pillar.name}</h3>
+              <p className="mt-2 text-[15px] italic text-ink/72">{pillar.signature}</p>
+            </TiltCard>
+          </StaggerItem>
+        ))}
+      </Stagger>
     </section>
   );
 }

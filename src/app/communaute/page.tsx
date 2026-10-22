@@ -15,8 +15,8 @@ export default function CommunautePage() {
       title="Communauté"
       signature="L'Afrique se rassemble."
       vision="Rassembler celles et ceux qui portent le projet Origin Teranga, en Afrique et dans la diaspora."
-      image={images.histoire.transmission}
-      imageAlt="Transmission intergénérationnelle lors d'un moment de partage"
+      image={images.pillars.communauteMain}
+      imageAlt="Groupe souriant réuni sur un rooftop"
       accentImage={images.histoire.paris}
       accentImageAlt="Rue parisienne avec vue sur la tour Eiffel"
       objectifs={[
