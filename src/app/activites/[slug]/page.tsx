@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ACTIVITES, getActivite } from "@/lib/activites";
+import { REGISTRATION_URL } from "@/lib/links";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -72,7 +73,9 @@ export default async function ActiviteDetailPage({ params }: Props) {
           ))}
           <div className="mt-4 flex flex-wrap gap-4">
             <a
-              href="/reserver"
+              href={REGISTRATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex h-[52px] items-center gap-2.5 rounded-full bg-clay px-7 text-sm font-bold text-ink transition-all duration-300 hover:bg-clay-soft hover:-translate-y-0.5"
             >
               {activite.cta}

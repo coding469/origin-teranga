@@ -9,7 +9,6 @@ import {
 } from "@/app/reserver/actions";
 
 const EVENT_DATES = [
-  { value: "2026-11-04", label: "Mercredi 4 novembre" },
   { value: "2026-11-05", label: "Jeudi 5 novembre" },
   { value: "2026-11-06", label: "Vendredi 6 novembre" },
   { value: "2026-11-07", label: "Samedi 7 novembre" },

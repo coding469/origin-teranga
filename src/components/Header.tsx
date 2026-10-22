@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useScroll, useSpring } from "motion/react";
+import { REGISTRATION_URL } from "@/lib/links";
 
 const NAV_LINKS = [
   { href: "/festival", label: "Festival" },
@@ -17,6 +19,8 @@ const NAV_LINKS = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 300, damping: 40 });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -34,12 +38,16 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-10 z-50 backdrop-blur-md transition-colors duration-[400ms] border-b ${
+      className={`sticky top-10 z-50 backdrop-blur-md transition-colors duration-[400ms] border-b relative ${
         scrolled
           ? "bg-bg/92 border-ink/14"
           : "bg-bg/42 border-ink/8"
       }`}
     >
+      <motion.div
+        className="absolute bottom-0 left-0 h-[2px] w-full origin-left bg-clay"
+        style={{ scaleX: progress }}
+      />
       <div className="flex items-center justify-between px-5 py-5 sm:px-8 lg:px-[72px]">
         <Link href="/#top" onClick={() => setOpen(false)} aria-label="Origin Teranga — accueil">
           <Image
@@ -63,7 +71,9 @@ export default function Header() {
 
         <div className="hidden xl:block">
           <a
-            href="/reserver"
+            href={REGISTRATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex h-[52px] items-center gap-2.5 rounded-full bg-clay px-7 text-sm font-bold text-ink transition-all duration-300 hover:bg-clay-soft hover:-translate-y-0.5"
           >
             S&apos;inscrire
@@ -111,7 +121,9 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="/reserver"
+            href={REGISTRATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="mt-5 inline-flex h-[52px] items-center justify-center gap-2.5 rounded-full bg-clay px-7 text-sm font-bold text-ink"
           >

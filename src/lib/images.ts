@@ -5,7 +5,16 @@ function unsplash(slug: string, premium = false) {
 
 export const images = {
   hero: unsplash("photo-1515657241610-a6b33f0f6c5a"),
-  manifesto: unsplash("photo-1611258692399-87e8a1206ecd"),
+  manifesto: "/images/manifesto-portrait.jpg",
+  impactGroup: "/images/impact-group.jpg",
+
+  pillars: {
+    festivalMain: "/images/festival-foule.jpg",
+    festivalAccent: "/images/festival-portrait.jpg",
+    experiencesMain: "/images/experiences-sport.jpg",
+    experiencesAccent: "/images/experiences-atelier.jpg",
+    communauteMain: "/images/communaute-groupe.jpg",
+  },
 
   activites: {
     voyage: unsplash("photo-1644772088209-c71d5c59f719"),
