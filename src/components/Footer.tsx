@@ -1,3 +1,5 @@
+import { Stagger, StaggerItem } from "@/components/motion/Stagger";
+
 const FESTIVAL_LINKS = [
   { label: "Le concept", href: "#manifesto" },
   { label: "Programme", href: "#programme" },
@@ -41,8 +43,8 @@ function FacebookIcon() {
 export default function Footer() {
   return (
     <footer id="contact" className="bg-[#0A0908] px-5 pt-16 pb-9 sm:px-8 lg:px-[72px]">
-      <div className="flex flex-wrap justify-between gap-12 border-b border-ink/14 pb-12">
-        <div className="max-w-[340px] flex-1 basis-[280px]">
+      <Stagger className="flex flex-wrap justify-between gap-12 border-b border-ink/14 pb-12">
+        <StaggerItem className="max-w-[340px] flex-1 basis-[280px]">
           <div className="mb-4 font-display text-xl font-semibold">
             Origin&nbsp;Teranga
           </div>
@@ -55,28 +57,28 @@ export default function Footer() {
             <a
               href="#"
               aria-label="Instagram"
-              className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-ink/22 transition-all duration-300 hover:border-clay-soft hover:bg-clay/14"
+              className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-ink/22 transition-all duration-300 hover:scale-110 hover:border-clay-soft hover:bg-clay/14"
             >
               <InstagramIcon />
             </a>
             <a
               href="#"
               aria-label="TikTok"
-              className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-ink/22 transition-all duration-300 hover:border-clay-soft hover:bg-clay/14"
+              className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-ink/22 transition-all duration-300 hover:scale-110 hover:border-clay-soft hover:bg-clay/14"
             >
               <TikTokIcon />
             </a>
             <a
               href="#"
               aria-label="Facebook"
-              className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-ink/22 transition-all duration-300 hover:border-clay-soft hover:bg-clay/14"
+              className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-ink/22 transition-all duration-300 hover:scale-110 hover:border-clay-soft hover:bg-clay/14"
             >
               <FacebookIcon />
             </a>
           </div>
-        </div>
+        </StaggerItem>
 
-        <div className="flex-1 basis-[140px]">
+        <StaggerItem className="flex-1 basis-[140px]">
           <div className="mb-[18px] text-[12.5px] font-bold uppercase tracking-[0.22em] text-ink/34">
             Festival
           </div>
@@ -91,9 +93,9 @@ export default function Footer() {
               </a>
             ))}
           </div>
-        </div>
+        </StaggerItem>
 
-        <div className="flex-1 basis-[140px]">
+        <StaggerItem className="flex-1 basis-[140px]">
           <div className="mb-[18px] text-[12.5px] font-bold uppercase tracking-[0.22em] text-ink/34">
             Activités
           </div>
@@ -108,9 +110,9 @@ export default function Footer() {
               </a>
             ))}
           </div>
-        </div>
+        </StaggerItem>
 
-        <div className="flex-1 basis-[220px]">
+        <StaggerItem className="flex-1 basis-[220px]">
           <div className="mb-[18px] text-[12.5px] font-bold uppercase tracking-[0.22em] text-ink/34">
             Contact
           </div>
@@ -120,8 +122,8 @@ export default function Footer() {
               contact@originteranga.com
             </a>
           </div>
-        </div>
-      </div>
+        </StaggerItem>
+      </Stagger>
 
       <div className="flex flex-wrap items-center justify-between gap-3 pt-7">
         <span className="text-[12.5px] text-ink/34">

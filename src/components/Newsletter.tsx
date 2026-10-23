@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Reveal from "@/components/motion/Reveal";
 
 export default function Newsletter() {
   const [subscribed, setSubscribed] = useState(false);
@@ -15,7 +16,7 @@ export default function Newsletter() {
       id="reserver"
       className="bg-sand px-5 py-16 text-dark-ink sm:px-8 sm:py-24 lg:px-[72px] lg:py-[110px]"
     >
-      <div className="mx-auto max-w-[620px] text-center">
+      <Reveal className="mx-auto max-w-[620px] text-center">
         <span className="text-[12.5px] font-bold uppercase tracking-[0.22em] text-clay">
           Newsletter
         </span>
@@ -38,11 +39,11 @@ export default function Newsletter() {
             type="email"
             required
             placeholder="votre@email.com"
-            className="h-14 max-w-[320px] flex-1 basis-[240px] rounded-full border border-dark-ink/14 bg-transparent px-6 text-[15px] text-dark-ink placeholder:text-dark-ink/45 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-clay"
+            className="h-14 max-w-[320px] flex-1 basis-[240px] rounded-full border border-dark-ink/14 bg-transparent px-6 text-[15px] text-dark-ink placeholder:text-dark-ink/45 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-clay transition-shadow duration-300 focus:shadow-[0_0_0_6px_rgba(200,88,46,0.12)]"
           />
           <button
             type="submit"
-            className="inline-flex h-14 items-center rounded-full bg-clay px-7 text-sm font-bold text-ink transition-all duration-300 hover:bg-clay-soft"
+            className="inline-flex h-14 items-center rounded-full bg-clay px-7 text-sm font-bold text-ink transition-all duration-300 hover:bg-clay-soft hover:-translate-y-0.5"
           >
             S&apos;inscrire
           </button>
@@ -52,7 +53,7 @@ export default function Newsletter() {
             Merci ! Vous recevrez bientôt nos prochaines nouvelles.
           </p>
         )}
-      </div>
+      </Reveal>
     </section>
   );
 }
