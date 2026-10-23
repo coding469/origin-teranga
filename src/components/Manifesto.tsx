@@ -16,7 +16,7 @@ export default function Manifesto() {
   return (
     <section
       id="manifesto"
-      className="sticky top-0 z-[11] rounded-t-[32px] bg-sand px-5 py-20 text-dark-ink shadow-[0_-24px_60px_rgba(0,0,0,0.25)] sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
+      className="bg-sand px-5 py-20 text-dark-ink sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
     >
       <div className="grid gap-12 lg:grid-cols-[400px_1fr] lg:gap-16">
         <Reveal className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[22px] lg:mx-0 lg:max-w-none">

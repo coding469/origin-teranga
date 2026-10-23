@@ -58,7 +58,7 @@ export default function Univers() {
   return (
     <section
       id="ecosysteme"
-      className="sticky top-0 z-[16] rounded-t-[32px] bg-sand px-5 py-20 text-dark-ink shadow-[0_-24px_60px_rgba(0,0,0,0.25)] sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
+      className="bg-sand px-5 py-20 text-dark-ink sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
     >
       <div className="mb-10 max-w-[680px]">
         <span className="text-[12.5px] font-bold uppercase tracking-[0.22em] text-clay">

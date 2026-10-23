@@ -9,7 +9,7 @@ export default function Programme() {
   return (
     <section
       id="programme"
-      className="sticky top-0 z-[13] rounded-t-[32px] bg-bg-soft px-5 py-20 shadow-[0_-24px_60px_rgba(0,0,0,0.25)] sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
+      className="bg-bg-soft px-5 py-20 sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
     >
       <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
         <div>

@@ -13,7 +13,7 @@ export default function Newsletter() {
   return (
     <section
       id="reserver"
-      className="relative z-[20] bg-sand px-5 py-16 text-dark-ink sm:px-8 sm:py-24 lg:px-[72px] lg:py-[110px]"
+      className="bg-sand px-5 py-16 text-dark-ink sm:px-8 sm:py-24 lg:px-[72px] lg:py-[110px]"
     >
       <div className="mx-auto max-w-[620px] text-center">
         <span className="text-[12.5px] font-bold uppercase tracking-[0.22em] text-clay">

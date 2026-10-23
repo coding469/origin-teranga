@@ -9,7 +9,7 @@ export default function BattleAfroBanner() {
   return (
     <section
       id="battle"
-      className="sticky top-0 z-[14] overflow-hidden rounded-t-[32px] bg-bg px-5 py-20 shadow-[0_-24px_60px_rgba(0,0,0,0.25)] sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
+      className="relative overflow-hidden bg-bg px-5 py-20 sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
     >
       <div className="relative z-10 grid gap-16 lg:grid-cols-2 lg:items-center lg:gap-20">
         <Stagger className="text-center lg:text-left">

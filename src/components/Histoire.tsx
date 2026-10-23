@@ -45,7 +45,7 @@ export default function Histoire() {
   return (
     <section
       id="histoire"
-      className="sticky top-0 z-[15] rounded-t-[32px] bg-bg px-5 py-20 shadow-[0_-24px_60px_rgba(0,0,0,0.25)] sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
+      className="bg-bg px-5 py-20 sm:px-8 sm:py-28 lg:px-[72px] lg:py-[140px]"
     >
       <Reveal className="mb-14 max-w-[720px] px-0 sm:px-8 lg:px-0">
         <span className="text-[12.5px] font-bold uppercase tracking-[0.22em] text-clay-soft">
